@@ -1,0 +1,82 @@
+<!--
+The markup in NativeScript apps contains a series of user interface components, each
+of which NativeScript renders with a platform-specific iOS or Android native control.
+You can find a full list of user interface components you can use in your app at
+https://docs.nativescript.org/ui/components.
+-->
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+xmlns:app="./material/appbar"
+xmlns:bs="./material/bottomsheet"
+xmlns:ti="./material/text-input"
+xmlns:btn="./material/buttons"
+xmlns:bnav="./material/bottomnav"
+xmlns:pullr="./material/pullrefresh"
+xmlns:tab="./material/tabs"
+xmlns:sea="./material/search"
+xmlns:rec="./material/recycler"
+navigatingTo="onNavigatingTo">
+	 <GridLayout rows="*" columns="*" id="root"> 
+		<sea:SearchBarModal id="searchbar">
+			<sea:SearchBarModal.barTemplate>
+				<sea:SearchBar>
+					<sea:SearchField/>
+					<sea:SearchIcon text="arrow_back" action="cancel" position="left"/>
+					<sea:SearchIcon text="mic" action="speech" position="right"/>
+					<sea:SearchIcon text="clear" action="clear" position="right"/>
+				</sea:SearchBar>
+			</sea:SearchBarModal.barTemplate>
+			<sea:SearchBarModal.resultTemplate>
+				<StackLayout  paddingTop="15">
+					<ListView items="{{results}}"  itemTap="searchTap">
+						<ListView.itemTemplate>
+							<Label text="{{label}}" textWrap="true" />
+						</ListView.itemTemplate>
+					</ListView>
+				</StackLayout>
+			</sea:SearchBarModal.resultTemplate>
+		</sea:SearchBarModal>
+		<pullr:PullToRefresh direction="both" id="pullrefresh">
+			<rec:RecyclerView row="0"  items="{{source}}" id="list" itemTap="tapItem" itemLongTap="tapLongItem" itemTemplateSelector="templateSelector">
+				<rec:RecyclerView.itemTemplates>
+					<template key="zero">
+						<Label text="{{ text }}" backgroundColor="green" />
+					</template>
+					<template key="un">
+						<Label text="{{ text }}" backgroundColor="white" paddingTop="10"  paddingBottom="10" />
+					</template>
+					<template key="deux">
+						<Label text="{{ text }}" backgroundColor="red"/>
+					</template>
+				</rec:RecyclerView.itemTemplates>
+			</rec:RecyclerView>
+		</pullr:PullToRefresh> 
+		<app:AppBarLayout columns="auto,*,auto,auto" rows="auto,auto" id="actionbar">
+			<app:AppBarIcon text="list" col="0"/>
+			<app:AppBarTitle text="My Application" col="1"/>
+			<app:AppBarIcon text="notifications" col="2"/>
+			<app:AppBarIcon text="search" col="3" tap="openSearch"/>
+			<tab:Tabs select="selectTabs" colSpan="4" row="1">
+				<tab:TabSep/>
+				<tab:TabItem>
+					<tab:TabTitle text="Mes Chouks" />
+				</tab:TabItem>
+				<tab:TabItem>
+					<tab:TabTitle text="Mes Catégories" />
+				</tab:TabItem>
+				<tab:TabItem>
+					<tab:TabTitle text="Mes Recherches" />
+				</tab:TabItem>
+				<tab:TabItem>
+					<tab:TabTitle text="Mes Pages" />
+				</tab:TabItem>
+				<tab:TabItem>
+					<tab:TabTitle text="Mes Aller" />
+				</tab:TabItem>
+				<tab:TabItem>
+					<tab:TabTitle text="Mes Pourquoi" />
+				</tab:TabItem>
+			</tab:Tabs>
+		</app:AppBarLayout> 
+ 		<btn:FloatButton row="0" id="floatbtn" afterTap="navigateForm" animNavigation="true" text="edit" />
+	</GridLayout>
+</Page>

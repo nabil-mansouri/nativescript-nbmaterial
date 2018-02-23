@@ -1,0 +1,33 @@
+Tabs{
+    elevation:8;
+    autoselect: true;
+    unchecked: 0.7; 
+    activems: 266;
+    inactivems: 266;
+    width: 100%;
+    ripple-color: white;
+    height:48;
+}
+TabItem TabIcon{
+    font-size: 24;
+    opacity: 0.8;
+    margin-top:  12;
+    margin-left: 12;
+    margin-right: 12;
+    horizontal-align: center;
+}
+TabItem TabTitle{
+    horizontal-align: center;
+    font-size: 14; 
+    margin-top: 14;
+    margin-left: 12;
+    margin-right: 12;
+}
+TabSep{
+    height:2;
+    vertical-align: bottom;
+    background-color: yellow;
+}
+AppBar Tabs{
+    elevation:0;
+}

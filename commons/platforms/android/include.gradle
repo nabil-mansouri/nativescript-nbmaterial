@@ -1,0 +1,21 @@
+/* Include.gradle configuration: http://docs.nativescript.org/plugins/plugins#includegradle-specification */
+
+android {
+	productFlavors {
+		"nativescript-material-commons" {
+			dimension "nativescript-material-commons"
+		}
+	}
+}
+
+dependencies {
+	def suppotVer = "22.0.0";
+	if(project.hasProperty("supportVersion")){
+		suppotVer = supportVersion
+	}
+    compile "com.android.support:design:$suppotVer"
+	//compile "com.androidhuman.circlerefreshlayout:circlerefreshlayout:0.1.0"
+	//compile 'com.baoyz.pullrefreshlayout:library:1.2.0'
+    //compile 'com.balysv:material-ripple:1.0.2' 
+	//https://github.com/bradmartin/nativescript-ripple
+}

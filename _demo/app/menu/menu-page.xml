@@ -1,0 +1,25 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+xmlns:bnav="./material/bottomnav">
+	<bnav:BottomNavigation autoselect="false" select="selectNav" id="bottomnav" class="shifted">
+		<bnav:BottomNavigationItem>
+			<bnav:Icon text="dashboard"  />
+			<bnav:Title text="Home"/>
+		</bnav:BottomNavigationItem>
+		<bnav:BottomNavigationItem>
+			<bnav:Icon text="add"/>
+			<bnav:Title text="Ajouter" />
+		</bnav:BottomNavigationItem>
+		<bnav:BottomNavigationItem>
+			<bnav:Icon text="favorite"/>
+			<bnav:Title text="Consulter" />
+		</bnav:BottomNavigationItem>
+		<bnav:BottomNavigationItem>
+			<bnav:Icon text="edit"/>
+			<bnav:Title text="Editer" />
+		</bnav:BottomNavigationItem>
+		<bnav:BottomNavigationItem>
+			<bnav:Icon text="swap_horiz"/>
+			<bnav:Title text="Switch" />
+		</bnav:BottomNavigationItem>
+	</bnav:BottomNavigation>  
+</Page>

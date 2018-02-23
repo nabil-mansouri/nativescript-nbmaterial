@@ -1,0 +1,11 @@
+FloatButton{
+    width:56;
+    height:56;
+    elevation:6;
+    border-radius:56;
+    font-size: 24;
+    color:white;
+    background-color:black;
+    ripple-color:white;
+    border-color:transparent;
+}

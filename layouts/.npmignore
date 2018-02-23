@@ -1,0 +1,7 @@
+.vscode/
+tests/
+node_modules/
+platforms/ios-bin/
+*.ts
+!commons.ts
+!*.d.ts

@@ -1,0 +1,73 @@
+<!--
+The markup in NativeScript apps contains a series of user interface components, each
+of which NativeScript renders with a platform-specific iOS or Android native control.
+You can find a full list of user interface components you can use in your app at
+https://docs.nativescript.org/ui/components.
+-->
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+xmlns:app="./material/appbar"
+xmlns:bs="./material/bottomsheet"
+xmlns:ti="./material/text-input"
+xmlns:btn="./material/buttons"
+xmlns:bnav="./material/bottomnav"
+xmlns:tab="./material/tabs"
+xmlns:sea="./material/search"
+xmlns:cal="./material/calendar"
+xmlns:rec="./recycler"
+navigatingTo="onNavigatingTo" class="page">
+	 <GridLayout rows="auto,*" id="root"> 
+		<!--APPBAR --> 
+		<app:AppBarLayout columns="auto,*,auto" rows="auto" id="actionbar">
+			<app:AppBarIcon text="arrow_back" col="0" action="back"/>
+			<app:AppBarTitle text="My Application" col="1"/>
+			<app:AppBarIcon text="check" col="2" />
+		</app:AppBarLayout> 
+		<ScrollView row="1" id="scroll">
+			<StackLayout backgroundColor="white">
+				<ti:TextLayout rows="auto,auto" id="textinput" class="fullwidth dense">
+					<ti:TextPlaceholder text="TopFix Height"></ti:TextPlaceholder>
+					<ti:MultiLine hint="" text="{{textInput}}" editable="true" maxHeight="100"/>			
+				</ti:TextLayout>
+				<ti:TextLayout rows="auto,auto" id="textinput1" class="fullwidth dense error">
+					<ti:TextPlaceholder text="Middle0"></ti:TextPlaceholder>
+					<TextField hint="" text="{{textInput1}}"/>
+					<Label text="Erreur de saisie" textWrap="true" class="error" />			
+				</ti:TextLayout>
+				<ti:TextLayout rows="auto,auto" id="textinput2" class="fullwidth dense">
+					<ti:TextPlaceholder text="Middle1"></ti:TextPlaceholder>
+					<TextField hint="Saisis gros" text="{{textInput2}}"/>		
+				</ti:TextLayout>
+				<ti:TextLayout rows="auto,auto" id="textinput3" class="fullwidth dense">
+					<ti:TextPlaceholder text="Middle2"></ti:TextPlaceholder>
+					<TextField hint="Saisis gros" text="{{textInput3}}"/>		
+				</ti:TextLayout>
+				<ti:TextLayout rows="auto,auto" id="textinput4" class="fullwidth dense">
+					<ti:TextPlaceholder text="Middle3"></ti:TextPlaceholder>
+					<TextField hint="Saisis gros" text="{{textInput4}}"/>		
+				</ti:TextLayout>
+				<ti:TextLayout rows="auto,auto" id="autogrow" class="fullwidth dense">
+					<ti:TextPlaceholder text="Top Autogrow"></ti:TextPlaceholder>
+					<ti:MultiLine hint="" text="{{autogrow}}" editable="true"/>			
+				</ti:TextLayout>
+				<ti:TextLayout rows="auto,auto" id="visible" class="fullwidth dense">
+					<ti:TextPlaceholder text="Visible"></ti:TextPlaceholder>
+					<TextField hint="Saisis gros" text="{{visible}}"/>		
+				</ti:TextLayout>
+				<ti:TextLayout rows="auto,auto" id="textinput5" class="fullwidth dense">
+					<ti:TextPlaceholder text="Bottom"></ti:TextPlaceholder>
+					<TextField hint="Saisis gros" text="{{textInput5}}"/>		
+				</ti:TextLayout>
+				<ti:TextLayout rows="auto,auto" id="autogrowb" class="fullwidth dense">
+					<ti:TextPlaceholder text="Bottom AutoGrow"></ti:TextPlaceholder>
+					<ti:MultiLine hint="Saisis gros" text="{{autogrowb}}"/>		
+				</ti:TextLayout>
+				<cal:CalendarMonthLayout dayTapped="selectDate" multiple="true" marginBottom="20">
+					<cal:CalendarAction action="previous" text="chevron_left"/>
+					<cal:CalendarTitle/>
+					<cal:CalendarAction action="next" text="chevron_right"/>
+				</cal:CalendarMonthLayout>
+			</StackLayout>
+		</ScrollView>
+		<btn:FloatButton id="floatbtn" afterTap="showBS" animNavigation="true" backgroundColor="purple" text="edit" row="1"/>
+	</GridLayout>
+</Page>

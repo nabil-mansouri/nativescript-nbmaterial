@@ -1,0 +1,20 @@
+TextLayout{
+    anchor:middle scroll;
+}
+#textinput{
+    margin-top:50;/*to see anchor*/
+    anchor:top scroll;
+}
+#autogrow{ 
+    anchor:top scroll autogrow 0.9;
+}
+#visible{
+    anchor:visible scroll;
+}
+#textinput5{
+    anchor:bottom scroll;
+}
+#autogrowb{
+    margin-bottom:50;/*to see anchor*/
+    anchor:bottom scroll autogrow 0.9;
+}

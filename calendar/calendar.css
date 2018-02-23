@@ -1,0 +1,43 @@
+CalendarMonthLayout{
+    horizontal-align:center; 
+}
+CalendarTitle,CalendarAction{
+    font-size:16;
+    text-align:center;
+} 
+CalendarMonthLayout Calendar{
+    margin-top:16;
+}
+Calendar{
+    horizontal-align:center; 
+}
+CalendarDay{
+    vertical-align:center;
+    horizontal-align:center;
+    text-align: center;
+    text-wrap:false;
+    font-size:16;  
+    width:40;
+    height:40;
+    margin:2;
+    padding:0;
+    color:black; 
+    background-color:transparent;
+    border-width: 1;
+    border-color: transparent;
+}
+CalendarDay.dayname{
+    color:rgba(0,0,0,0.5);
+    padding:0; 
+    width:auto;
+    height:auto;
+}
+CalendarDay.today{
+    color:purple;
+    font-weight: bold;
+}
+CalendarDay.selected{
+    background-color:purple;
+    color:white;
+    border-radius:100%;
+}

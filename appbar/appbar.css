@@ -1,0 +1,15 @@
+AppBar{
+    ripple-color: white;
+    elevation:8;
+    vertical-align: top;
+}
+AppBarTitle{ 
+    margin-left:16;
+    margin-bottom:20;
+    margin-top:18; 
+    font-size:18;
+}
+AppBarIcon{
+    padding:16;
+    font-size:24; 
+}

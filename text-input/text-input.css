@@ -1,0 +1,78 @@
+TextLayout.normal{
+    padding-top:16;
+    padding-bottom:8;
+    margin-bottom:8;
+    padding-left:5;
+    padding-right:5;
+}
+TextLayout.normal TextPlaceholder{
+    font-size:12;
+    margin-bottom:8;
+}
+TextLayout.normal Label{
+    font-size:12;
+}
+TextLayout.normal TextField,
+TextLayout.normal SingleLine,
+TextLayout.normal TextView,
+TextLayout.normal MultiLine{
+    background-color: transparent; 
+    width:100%;
+    font-size:16;
+    border-bottom-color: #212121;/*87% of black*/
+    border-bottom-width: 1; 
+    padding-bottom: 8;
+    margin-bottom: 8;
+}
+/*DENSE*/
+TextLayout.normal.dense{
+    padding-top:8;
+    padding-bottom:4;
+    margin-bottom:4;
+}
+TextLayout.normal.dense TextPlaceholder{
+    margin-bottom:4;
+}
+TextLayout.normal.dense TextField,
+TextLayout.normal.dense SingleLine,
+TextLayout.normal.dense TextView,
+TextLayout.normal.dense MultiLine{
+    padding-top:4;
+    padding-bottom: 4;
+    margin-bottom: 4;
+}
+/*FULL WIDTH*/
+TextLayout.fullwidth{
+    padding-top:8;
+    padding-bottom:20; 
+    padding-left:5;
+    padding-right:5;
+    border-bottom-color: #939393;/*42% of black*/
+    border-bottom-width: 1; 
+}
+TextLayout.fullwidth TextPlaceholder,
+TextLayout.fullwidth Label{
+    font-size:12;
+}
+TextLayout.fullwidth TextField,
+TextLayout.fullwidth SingleLine,
+TextLayout.fullwidth TextView,
+TextLayout.fullwidth MultiLine{
+    color:black;
+    background-color: transparent; 
+    width:100%;
+    font-size:16;
+    padding:0;
+    margin:0;
+}
+TextLayout.fullwidth.error{ 
+    padding-bottom:8; 
+} 
+/*FULL WIDTH DENSE*/
+TextLayout.fullwidth.dense{
+    padding-top:4;
+    padding-bottom:16; 
+}
+TextLayout.fullwidth.dense.error{ 
+    padding-bottom:4; 
+}

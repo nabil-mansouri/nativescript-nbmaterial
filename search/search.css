@@ -1,0 +1,22 @@
+SearchBar{
+    ripple-color: rgba(0,0,0,0.72);
+    background-color: white;
+    vertical-align: top;
+    horizontal-align:stretch;
+    elevation:12;
+}
+SearchField{ 
+    margin:16; 
+    padding:0;
+    font-size:18;
+    border-width:0;
+}
+SearchIcon{
+    font-size:24; 
+    padding:16;
+    text-wrap:true;
+    color:rgba(0,0,0,0.72);
+}
+.searchResult{
+    background-color:white;
+}

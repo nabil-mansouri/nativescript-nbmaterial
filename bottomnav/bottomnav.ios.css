@@ -1,0 +1,51 @@
+BottomNavigation{
+    elevation:8;
+    autoselect: true;
+    unchecked: 0.7;
+    maxfont: 14;
+    activems: 266;
+    inactivems: 266;
+    width: 100%;
+    padding:0;
+}
+BottomNavigationItem{
+    orientation:vertical;
+    min-width:80;
+    ripple-color: white;
+    padding:0;
+}
+BottomNavigationItem Icon{
+    font-size: 24;
+    opacity: 0.8;
+    padding-left: 12;
+    padding-right: 12;
+    margin-top:  16;
+    horizontal-align: center;
+    vertical-align: top;
+}
+BottomNavigationItem Title{
+    vertical-align: top;
+    horizontal-align: center;
+    font-size: 12; 
+}
+
+/**
+*FIXED
+*/
+BottomNavigation.fixed Icon{
+    margin-top:  6;
+}
+BottomNavigation.fixed Title{
+    margin-top:  32;
+}
+/**
+*SHIFTED
+*/
+BottomNavigation.shifted BottomNavigationItem{
+    min-width:56;
+}
+BottomNavigation.shifted Title{ 
+    transform:scale(0,0);
+    margin-top:  32;
+    font-size: 14; 
+}
