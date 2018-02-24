@@ -7,9 +7,9 @@ import { Frame, NavigationEntry, topmost, OnNavigateToEventData } from 'tns-core
 import { AnimationCurve } from 'tns-core-modules/ui/enums';
 import { GestureTypes } from 'tns-core-modules/ui/gestures';
 import { SelectItemEventData, BottomNavigationRouter, BottomNavigationFrame as BottomNavigationFrameDef, BottomNavigation as BottomNavigationDef, BottomNavigationItem as BottomNavigationItemDef } from "./bottomnav";
-import "nativescript-nbmaterial-elevation";//NEED TO aUGMENT VIEW
-import "nativescript-nbmaterial-ripple";//NEED TO aUGMENT VIEW
-import "nativescript-nbmaterial-layouts";//NEED TO aUGMENT VIEW
+import "nativescript-nbmaterial-elevation/elevation";//NEED TO aUGMENT VIEW
+import "nativescript-nbmaterial-ripple/ripple";//NEED TO aUGMENT VIEW
+import "nativescript-nbmaterial-layouts/layouts";//NEED TO aUGMENT VIEW
 
 export class BottomNavigationFrame extends GridLayout implements BottomNavigationFrameDef {
     protected navFrame: Frame;

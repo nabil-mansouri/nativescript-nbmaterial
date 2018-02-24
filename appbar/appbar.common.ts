@@ -7,9 +7,9 @@ import { GestureTypes } from 'tns-core-modules/ui/gestures';
 import { translateYProperty, layout } from 'tns-core-modules/ui/core/view';
 import { Interpolator } from '../coordinator/behaviours/interpolator';
 import * as def from "./appbar";
-import "nativescript-nbmaterial-elevation";//NEED TO aUGMENT VIEW
-import "nativescript-nbmaterial-ripple";//NEED TO aUGMENT VIEW
-import "nativescript-nbmaterial-layouts"//NEED TO AUGMENT PAGE
+import "nativescript-nbmaterial-elevation/elevation";//NEED TO aUGMENT VIEW
+import "nativescript-nbmaterial-ripple/ripple";//NEED TO aUGMENT VIEW
+import "nativescript-nbmaterial-layouts/layouts"//NEED TO AUGMENT PAGE
 
 export class AppBarLayout extends GridLayout implements def.AppBarLayout {
     statusBarStyle: "light" | "dark" = "light";

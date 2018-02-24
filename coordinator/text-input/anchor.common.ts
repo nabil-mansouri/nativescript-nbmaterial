@@ -7,6 +7,7 @@ import { Page } from "tns-core-modules/ui/page";
 import { TextLayout } from "nativescript-nbmaterial-textinput";
 import * as def from "./anchor";
 import { getKeyboardListener, KeyboardState } from "nativescript-nbmaterial-layouts/form";//AUGMEN PAGE
+import "nativescript-nbmaterial-layouts/style";//AUGMEN PAGE
 import "../coordinator";//AUGMENT VIEW ADDOBSERVER
 
 
@@ -110,7 +111,7 @@ export abstract class AnchorBehaviour implements Behaviour {
         }
     }
     onLoaded?() {
-        this.scrollView = this.view.page.getViewById(this.scrollViewId);
+        this.scrollView = <any>this.view.page.getViewById(this.scrollViewId);
         if (!this.scrollView) {
             throw "Could not find scroll view with id: " + this.scrollViewId;
         }

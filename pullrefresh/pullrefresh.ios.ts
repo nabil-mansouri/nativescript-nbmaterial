@@ -3,8 +3,8 @@ import { ActivityIndicator } from "ui/activity-indicator";
 import { RecyclerView } from "nativescript-nbmaterial-recycler";
 import { paddingTopProperty, paddingBottomProperty } from "ui/styling/style-properties";
 import * as Rx from 'rxjs/Rx';
-import { ProducerData, Producer, Behaviour } from "nativescript-nbmaterial-coordinator";
-import { ScrollData } from "nativescript-nbmaterial-coordinator";
+import { ProducerData, Producer, Behaviour } from "nativescript-nbmaterial-coordinator/behaviours/behaviour";
+import { ScrollData } from "nativescript-nbmaterial-coordinator/behaviours/scroll-base";
 import { ProxyViewContainer } from 'tns-core-modules/ui/proxy-view-container';
 import { PullToRefresh as PullToRefreshDef } from "./pullrefresh";
 

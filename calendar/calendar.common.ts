@@ -5,9 +5,9 @@ import { Button } from 'tns-core-modules/ui/button';
 import { Property, booleanConverter, layout } from "ui/core/view";
 import { GestureTypes, GestureEventData, SwipeGestureEventData, SwipeDirection } from "ui/gestures";
 import { Calendar as CalendarDef, CalendarMonthLayout as CalendarMonthDef, DayTappedEvent } from "./calendar";
-import "nativescript-nbmaterial-elevation";//NEED TO aUGMENT VIEW
-import "nativescript-nbmaterial-ripple";//NEED TO aUGMENT VIEW
-import 'nativescript-nbmaterial-layouts';//NEED TO AUGMENT PAGE
+import "nativescript-nbmaterial-elevation/elevation";//NEED TO aUGMENT VIEW
+import "nativescript-nbmaterial-ripple/ripple";//NEED TO aUGMENT VIEW
+import 'nativescript-nbmaterial-layouts/layouts';//NEED TO AUGMENT PAGE
 function safeArray(all: any[]) {
     if (!(all instanceof Array)) {
         return [];

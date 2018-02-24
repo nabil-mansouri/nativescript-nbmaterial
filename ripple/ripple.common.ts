@@ -11,7 +11,7 @@ import {
     GestureTypes
 } from "ui/gestures";
 import { RippleOption } from "./ripple"
-import { DimUtilsBase, Bounds } from "nativescript-nbmaterial-commons"
+import { DimUtils, Bounds } from "nativescript-nbmaterial-commons"
 
 
 export const rippleColorProperty = new CssProperty<Style, Color>({
@@ -70,11 +70,11 @@ export class RippleLayout extends AbsoluteLayout {
     perfomRipple(): Promise<any> {
         return new Promise((resolve, reject) => {
             //PREPARE
-            const bounds: Bounds = DimUtilsBase.toBounds(this, <any>this.parent);
-            const center = DimUtilsBase.centerOf(bounds);
-            const square = DimUtilsBase.tallerSquare(bounds);
+            const bounds: Bounds = DimUtils.toBounds(this, <any>this.parent);
+            const center = DimUtils.centerOf(bounds);
+            const square = DimUtils.tallerSquare(bounds);
             const radius = square.size.width / 2;
-            const origin = DimUtilsBase.makeCenterOf(square, center).origin;
+            const origin = DimUtils.makeCenterOf(square, center).origin;
             //
             const size = radius * 2;
             //RIPPLE

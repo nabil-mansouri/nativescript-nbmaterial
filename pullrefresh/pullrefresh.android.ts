@@ -1,10 +1,12 @@
 import { View, Property, layout } from 'tns-core-modules/ui/core/view';
 import { paddingTopProperty, paddingBottomProperty } from "ui/styling/style-properties";
 import { ActivityIndicator } from "ui/activity-indicator";
-import { RecyclerView } from "nativescript-nbmaterial-recycler" ;
+import { RecyclerView } from "nativescript-nbmaterial-recycler";
 import * as Rx from 'rxjs/Rx';
-import { ProducerData, Producer, Behaviour } from "nativescript-nbmaterial-coordinator" ;
-import { ScrollData } from "nativescript-nbmaterial-coordinator" ;
+import { ProducerData, Producer, Behaviour } from "nativescript-nbmaterial-coordinator/behaviours/behaviour";
+import { ScrollData } from "nativescript-nbmaterial-coordinator/behaviours/scroll-base";
+import "nativescript-nbmaterial-coordinator/recycler/scroll";
+import "nativescript-nbmaterial-layouts/layouts";
 import { PullToRefresh as PullToRefreshDef } from "./pullrefresh";
 import { LayoutBase } from 'tns-core-modules/ui/layouts/layout-base';
 
@@ -26,8 +28,8 @@ export class PullToRefresh extends LayoutBase implements PullToRefreshDef {
             let offset = layout.toDevicePixels(marginTp);
             native.setProgressViewOffset(false, 0, offset);
         }
-    } 
-    [paddingBottomProperty.setNative](margin){
+    }
+    [paddingBottomProperty.setNative](margin) {
         //super[paddingBottomProperty.setNative](marginTp);
     }
     startRefreshTop() {

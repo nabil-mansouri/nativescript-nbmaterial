@@ -11,6 +11,7 @@ import { GestureTypes } from 'tns-core-modules/ui/gestures';
 import { AnimationCurve } from 'tns-core-modules/ui/enums';
 import { SingleLine as SingleLineDef, TextLayout as TextLayoutDef, MultiLine as MultiLineDef, TextPlaceholder as TextPlaceholderDef } from "./text-input";
 import { DimUtils } from "nativescript-nbmaterial-commons";
+import "nativescript-nbmaterial-layouts/layouts";
 import "nativescript-nbmaterial-layouts/style";
 
 

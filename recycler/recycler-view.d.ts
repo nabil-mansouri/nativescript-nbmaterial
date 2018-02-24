@@ -4,8 +4,8 @@ import { EventData } from 'tns-core-modules/data/observable';
 import { ListView, ItemEventData } from 'tns-core-modules/ui/list-view';
 import { Label } from 'tns-core-modules/ui/label';
 export { ItemEventData };
-
-export declare class RecyclerView extends ListView { 
-    public static itemLongTapEvent; 
+ 
+export declare class RecyclerView extends ListView {
+    public static itemLongTapEvent;
     public recycler: any;
 } 

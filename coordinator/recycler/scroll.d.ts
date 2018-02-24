@@ -1,11 +1,11 @@
 import { View } from 'ui/core/view';
 import * as Rx from 'rxjs/Rx';
 import { ProducerData, Producer, Behaviour } from "./behaviour";
-import { ItemEventData } from "../../recycler";
+import { ItemEventData } from "nativescript-nbmaterial-recycler";
 
 
-declare module "../../recycler/recycler-view" {
-    interface RecyclerView {
+declare module "nativescript-nbmaterial-recycler/recycler-view" {
+    export interface RecyclerView { 
         scrollProducerRefCount: number;
         scrollProducer: Producer;
         createProducer(): Producer;
@@ -41,6 +41,6 @@ declare class FixedHeaderBehavior implements Behaviour {
     showAnimation: (behav: FixedHeaderBehavior) => void;
     constructor(private recycler: RecyclerView);
 }
-declare class ScrollScaleBehavior extends FixedHeaderBehavior { 
+declare class ScrollScaleBehavior extends FixedHeaderBehavior {
     constructor(private recycler: RecyclerView);
 }

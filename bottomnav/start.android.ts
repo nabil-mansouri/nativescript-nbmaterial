@@ -1,6 +1,6 @@
 import * as frame from "ui/frame";
 import * as app from 'application';
-import 'nativescript-nbmaterial-layouts';
+import 'nativescript-nbmaterial-layouts/layouts';
 
 
 let menu: string = null;
@@ -105,7 +105,8 @@ frame.Frame.prototype.showRootMenu = function () {
     const act: Activity = app.android.foregroundActivity;
     if (!self.isRootMenuVisible() && act.menuView) {
         act.menuView.visibility = "visible";
-        act.findViewById(android.R.id.content).invalidate();
+        let an: any = android;
+        act.findViewById(an.R.id.content).invalidate();
     }
 }
 frame.Frame.prototype.hideRootMenu = function () {
@@ -114,7 +115,8 @@ frame.Frame.prototype.hideRootMenu = function () {
     if (this.isRootMenuVisible()) {
         //?EED To change params layout height?
         act.menuView.visibility = "collapse";
-        act.findViewById(android.R.id.content).invalidate();
+        let an: any = android;
+        act.findViewById(an.R.id.content).invalidate();
     }
 }
 frame.Frame.prototype.isRootMenuVisible = function () {

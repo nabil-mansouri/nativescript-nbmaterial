@@ -12,7 +12,8 @@ import {
   backgroundInternalProperty, backgroundColorProperty, fontSizeProperty, paddingTopProperty, paddingBottomProperty, paddingLeftProperty, paddingRightProperty
 } from "tns-core-modules/ui/styling/style-properties";
 import { BottomSheetModal as BottomSheetDef } from "./bottomsheet";
-import "nativescript-nbmaterial-layouts";//NEED TO aUGMENT VIEW
+import "nativescript-nbmaterial-layouts/layouts";//NEED TO aUGMENT VIEW
+import "nativescript-nbmaterial-elevation/elevation";//NEED TO aUGMENT VIEW
 
 export module knownTemplates {
   export const template = "template";

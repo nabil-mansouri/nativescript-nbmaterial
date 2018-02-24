@@ -7,7 +7,6 @@ import { RecyclerViewBase, ItemEventData } from "./recycler-view.common";
 
 //EXPORT ALL INCLUNDING KNOWNTEMPLATE
 export * from "./recycler-view.common";
-
 //COULEUR INDICATEUR : recycler.nativeView.setColorSchemeColors([new Color("blue").android]) background:setProgressBackgroundColor(resourceId)
 //sinon recup les child mano puis leur mettre un background
 //TODO utiliser smooth scroller? 

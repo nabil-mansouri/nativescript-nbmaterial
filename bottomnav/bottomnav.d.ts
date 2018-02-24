@@ -54,3 +54,7 @@ declare module "tns-core-modules/ui/page" {
         menuRootIndex: number;
     }
 }
+
+declare module "android" {
+    R: any;
+}

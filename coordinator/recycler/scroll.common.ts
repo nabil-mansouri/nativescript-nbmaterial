@@ -3,23 +3,23 @@ import * as Rx from 'rxjs/Rx';
 import { ScrollState, ScrollData, ScrollEvent, FixedHeaderBehaviorBase, ScaleBehaviorBase } from "../behaviours/scroll-base";
 import { ProducerData, Producer, Behaviour } from "../behaviours/behaviour";
 import { RecyclerProducer } from "./scroll";
-import * as recycler from "nativescript-nbmaterial-recycler";
+import { RecyclerView, ItemEventData } from "nativescript-nbmaterial-recycler";
 
 declare module "ui/core/view" {
     interface View {
         originalMarginTop: any;
     }
 }
-recycler.RecyclerView.prototype.scrollProducerRefCount = 0;
+RecyclerView.prototype.scrollProducerRefCount = 0;
 
-recycler.RecyclerView.prototype.createProducer = function (): Producer {
+RecyclerView.prototype.createProducer = function (): Producer {
     if (!this.scrollProducer) {
         this.scrollProducer = new RecyclerProducer(this);
     }
     this.scrollProducerRefCount++;
     return this.scrollProducer;
 };
-recycler.RecyclerView.prototype.disposeProducer = function (): void {
+RecyclerView.prototype.disposeProducer = function (): void {
     this.scrollProducerRefCount--;
     if (this.scrollProducerRefCount == 0) {
         this.scrollProducer = null;
@@ -34,7 +34,7 @@ recycler.RecyclerView.prototype.disposeProducer = function (): void {
 export abstract class RecyclerProducerBase implements Producer {
     started = false;
     stream = new Rx.Subject<ScrollData>();
-    constructor(protected view: recycler.RecyclerView) { }
+    constructor(protected view: RecyclerView) { }
     abstract startNative();
     abstract stopNative();
     init() { }
@@ -54,12 +54,12 @@ export abstract class RecyclerProducerBase implements Producer {
 
 export class FixedHeaderBehavior extends FixedHeaderBehaviorBase {
     callback;
-    constructor(protected recycler: recycler.RecyclerView) {
+    constructor(protected recycler: RecyclerView) {
         super(recycler.createProducer())
     }
     onLoaded() {
         super.onLoaded();
-        this.callback = (data: recycler.ItemEventData) => {
+        this.callback = (data: ItemEventData) => {
             if (data.index == 0) {
                 if (!data.view.originalMarginTop) {
                     data.view.originalMarginTop = data.view.marginTop;
@@ -70,17 +70,17 @@ export class FixedHeaderBehavior extends FixedHeaderBehaviorBase {
                 delete data.view.originalMarginTop;
             }
         };
-        this.recycler.on(recycler.RecyclerView.itemLoadingEvent, this.callback);
+        this.recycler.on(RecyclerView.itemLoadingEvent, this.callback);
     }
     onDispose() {
         super.onDispose();
         this.recycler.disposeProducer();
-        this.recycler.off(recycler.RecyclerView.itemLoadingEvent, this.callback);
+        this.recycler.off(RecyclerView.itemLoadingEvent, this.callback);
     }
 }
 
 export class ScrollScaleBehavior extends ScaleBehaviorBase {
-    constructor(private recycler: recycler.RecyclerView) {
+    constructor(private recycler: RecyclerView) {
         super(recycler.createProducer())
     }
     onDispose() {

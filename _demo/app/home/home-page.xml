@@ -5,15 +5,15 @@ You can find a full list of user interface components you can use in your app at
 https://docs.nativescript.org/ui/components.
 -->
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" 
-xmlns:app="./material/appbar"
-xmlns:bs="./material/bottomsheet"
-xmlns:ti="./material/text-input"
-xmlns:btn="./material/buttons"
-xmlns:bnav="./material/bottomnav"
-xmlns:pullr="./material/pullrefresh"
-xmlns:tab="./material/tabs"
-xmlns:sea="./material/search"
-xmlns:rec="./material/recycler"
+xmlns:app="nativescript-nbmaterial-appbar"
+xmlns:bs="nativescript-nbmaterial-bottomsheet"
+xmlns:ti="nativescript-nbmaterial-textinput"
+xmlns:btn="nativescript-nbmaterial-buttons"
+xmlns:bnav="nativescript-nbmaterial-bottomnav"
+xmlns:pullr="nativescript-nbmaterial-pullrefresh"
+xmlns:tab="nativescript-nbmaterial-tabs"
+xmlns:sea="nativescript-nbmaterial-search"
+xmlns:rec="nativescript-nbmaterial-recycler"
 navigatingTo="onNavigatingTo">
 	 <GridLayout rows="*" columns="*" id="root"> 
 		<sea:SearchBarModal id="searchbar">
