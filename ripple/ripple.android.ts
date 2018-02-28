@@ -10,7 +10,7 @@ import {
 } from "./ripple.common";
 
 export { RippleLayout } from "./ripple.common";
-import { DimUtilsBase, Bounds } from "../commons/lib.common";
+import { DimUtils, Bounds } from "nativescript-nbmaterial-commons";
 
 function arrayInt(model: any[]) {
     let array = Array["create"]("int", model.length);
@@ -84,8 +84,8 @@ View.prototype.startRippleNative = function (opts): Promise<any> {
         const oldDrawable = wrapperNative.getBackground();
         const alpha = self.rippleAlpha || 0.22;
         const duration = self.rippleDuration || 200;
-        const bounds: Bounds = DimUtilsBase.toBounds(this, <any>this.parent);
-        const center = DimUtilsBase.centerOf(bounds);
+        const bounds: Bounds = DimUtils.toBounds(this, <any>this.parent);
+        const center = DimUtils.centerOf(bounds);
         //ripple.setAlpha(alpha * 255);
         let statesOn = Array["create"]("int", 2);
         statesOn[0] = android.R.attr.state_enabled;

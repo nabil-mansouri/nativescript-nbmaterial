@@ -13,11 +13,11 @@ export class KeyboardListenerImpl extends common.KeyboardListenerImpl {
             return;
         }
         const selfRef = new WeakRef<KeyboardListenerImpl>(this); 
-        const act: android.app.Activity = app.android.foregroundActivity;
+        const act: android.app.Activity = app.android.foregroundActivity || app.android.startActivity;
         const rootLayout = act.getWindow().getDecorView().findViewById(android.R.id.content); 
         this.androidListener = new android.view.ViewTreeObserver.OnGlobalLayoutListener({
             onGlobalLayout() {
-                const act: android.app.Activity = app.android.foregroundActivity;
+                const act: android.app.Activity = app.android.foregroundActivity || app.android.startActivity;
                 const rootLayout = act.getWindow().getDecorView().findViewById(android.R.id.content); 
                 let self = selfRef.get();
                 if (!rootLayout || !self) {
@@ -47,7 +47,7 @@ export class KeyboardListenerImpl extends common.KeyboardListenerImpl {
         if (this.androidListener == null) {
             return;
         }
-        const act: android.app.Activity = app.android.foregroundActivity;
+        const act: android.app.Activity = app.android.foregroundActivity || app.android.startActivity;
         let content = act.getWindow().getDecorView().findViewById(android.R.id.content);
         content.getViewTreeObserver().removeOnGlobalLayoutListener(this.androidListener);
         this.androidListener = null;

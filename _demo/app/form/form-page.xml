@@ -7,7 +7,7 @@ https://docs.nativescript.org/ui/components.
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" 
 xmlns:app="nativescript-nbmaterial-appbar"
 xmlns:bs="nativescript-nbmaterial-bottomsheet"
-xmlns:ti="nativescript-nbmaterial-text-input"
+xmlns:ti="nativescript-nbmaterial-textinput"
 xmlns:btn="nativescript-nbmaterial-buttons"
 xmlns:bnav="nativescript-nbmaterial-bottomnav"
 xmlns:tab="nativescript-nbmaterial-tabs"

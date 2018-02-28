@@ -1,6 +1,6 @@
 {
   "name": "nativescript-nbmaterial-appbar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A material implementation of the appbar layout for iOS and Android. With animation and coordinator plugin (scroll effect)",
   "main": "index",
   "typings": "appbar.d.ts",
@@ -55,9 +55,10 @@
   },
   "dependencies": {
     "nativescript-nbmaterial-commons": "^1.0.0",
+    "nativescript-nbmaterial-coordinator": "^1.0.0",
     "nativescript-nbmaterial-elevation": "^1.0.0",
-    "nativescript-nbmaterial-ripple": "^1.0.0",
-    "nativescript-nbmaterial-layouts": "^1.0.0"
+    "nativescript-nbmaterial-layouts": "^1.0.0",
+    "nativescript-nbmaterial-ripple": "^1.0.0"
   },
   "bootstrapper": "nativescript-plugin-seed"
 }

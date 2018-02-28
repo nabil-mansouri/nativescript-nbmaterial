@@ -1,6 +1,6 @@
 {
   "name": "nativescript-nbmaterial-bottomnav",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A nativescript implementation the material bottom navigation layout with animation effect. For iOS and Android",
   "main": "index",
   "typings": "index.d.ts",

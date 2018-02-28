@@ -4,7 +4,7 @@ You can use this file to perform app-level initialization, but the primary
 purpose of the file is to pass control to the app’s first module.
 */
 import "./bundle-config";
-import {startWithMenu} from 'nativescript-nbmaterial-bottomnav';
+import {startWithMenu} from 'nativescript-nbmaterial-bottomnav/start';
 
 startWithMenu({ moduleName: 'home/home-page' }, "menu/menu-page");
 /*

@@ -1,6 +1,6 @@
 import { Behaviour } from "../behaviours/behaviour";
 import { Property } from "tns-core-modules/ui/core/view";
-import { TextLayout } from "../../text-input";
+import { TextLayout } from "nativescript-nbmaterial-textinput";
 import { View } from "tns-core-modules/ui/core/view";
 
 /**

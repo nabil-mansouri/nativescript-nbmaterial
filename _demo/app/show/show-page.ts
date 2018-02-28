@@ -7,7 +7,8 @@ import { AnimationCurve } from 'ui/enums';
 import { GestureTypes, PanGestureEventData, GestureStateTypes } from 'ui/gestures';
 import { ObservableArray } from 'data/observable-array';
 import { Observable } from 'tns-core-modules/data/observable';
-import { ExpandableHeaderBehavior } from "nativescript-nbmaterial-coordinator";
+import "nativescript-nbmaterial-layouts/layouts";//AUGMENT PAGE
+import { ExpandableHeaderBehavior } from "nativescript-nbmaterial-coordinator/scrollview/scroll";
 import { ScrollView } from 'ui/scroll-view/scroll-view';
 
 import * as Rx from 'rxjs/Rx';

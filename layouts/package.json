@@ -1,6 +1,6 @@
 {
   "name": "nativescript-nbmaterial-layouts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A nativescript utils for manipulating layouts",
   "main": "index",
   "typings": "index.d.ts",

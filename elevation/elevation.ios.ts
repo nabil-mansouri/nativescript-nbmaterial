@@ -1,6 +1,6 @@
 import { View, Color } from "ui/core/view";
 import { Background } from "ui/styling/background";
-import "../layouts";//MUST IMPORT 
+import "nativescript-nbmaterial-layouts/layouts";//MUST IMPORT 
 import "./elevation.common";//MUST IMPORT 
 
 function onScroll(this: void, args): void {

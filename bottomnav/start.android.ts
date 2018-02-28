@@ -102,7 +102,7 @@ class Activity extends android.app.Activity {
 }
 frame.Frame.prototype.showRootMenu = function () {
     const self: frame.Frame = this;
-    const act: Activity = app.android.foregroundActivity;
+    const act: Activity = app.android.foregroundActivity || app.android.startActivity;
     if (!self.isRootMenuVisible() && act.menuView) {
         act.menuView.visibility = "visible";
         let an: any = android;
@@ -111,7 +111,7 @@ frame.Frame.prototype.showRootMenu = function () {
 }
 frame.Frame.prototype.hideRootMenu = function () {
     const self: frame.Frame = this;
-    const act: Activity = app.android.foregroundActivity;
+    const act: Activity = app.android.foregroundActivity || app.android.startActivity;
     if (this.isRootMenuVisible()) {
         //?EED To change params layout height?
         act.menuView.visibility = "collapse";
@@ -120,7 +120,7 @@ frame.Frame.prototype.hideRootMenu = function () {
     }
 }
 frame.Frame.prototype.isRootMenuVisible = function () {
-    const act: Activity = app.android.foregroundActivity;
+    const act: Activity = app.android.foregroundActivity || app.android.startActivity;
     if (act.menuView) {
         return !act.menuView.isCollapsed!
     }

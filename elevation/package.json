@@ -1,6 +1,6 @@
 {
   "name": "nativescript-nbmaterial-elevation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A nativescript implementation of material elevation for both platform iOS and Android",
   "main": "index",
   "typings": "elevation.d.ts",
@@ -54,7 +54,8 @@
     "typescript": "~2.3.0"
   },
   "dependencies": {
-    "nativescript-nbmaterial-commons": "^1.0.0"
+    "nativescript-nbmaterial-commons": "^1.0.0",
+    "nativescript-nbmaterial-layouts": "^1.0.0"
   },
   "bootstrapper": "nativescript-plugin-seed"
 }

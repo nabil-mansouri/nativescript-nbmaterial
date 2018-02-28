@@ -1,6 +1,6 @@
 import { CssProperty, Style, Color } from "ui/core/view";
 import { AbsoluteLayout } from "ui/layouts/absolute-layout";
-import { Point } from "../commons/lib.common"
+import { Point } from "nativescript-nbmaterial-commons";
 
 export declare const rippleColorProperty: CssProperty<Style, Color>;
 export declare const rippleAlphaProperty: CssProperty<Style, number>;

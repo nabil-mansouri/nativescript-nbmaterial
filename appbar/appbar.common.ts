@@ -5,7 +5,7 @@ import { Background } from 'tns-core-modules/ui/styling/background';
 import { Label } from 'tns-core-modules/ui/label';
 import { GestureTypes } from 'tns-core-modules/ui/gestures';
 import { translateYProperty, layout } from 'tns-core-modules/ui/core/view';
-import { Interpolator } from '../coordinator/behaviours/interpolator';
+import { Interpolator } from 'nativescript-nbmaterial-coordinator/behaviours/interpolator';
 import * as def from "./appbar";
 import "nativescript-nbmaterial-elevation/elevation";//NEED TO aUGMENT VIEW
 import "nativescript-nbmaterial-ripple/ripple";//NEED TO aUGMENT VIEW

@@ -1,6 +1,6 @@
 {
   "name": "nativescript-nbmaterial-ripple",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A nativescript implementation of Ripple. For iOS and Android",
   "main": "ripple",
   "typings": "ripple.d.ts",

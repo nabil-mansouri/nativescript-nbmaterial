@@ -1,6 +1,6 @@
 {
   "name": "nativescript-nbmaterial-textinput",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An implementation of material Text Input with animation effect (float text). For iOS and Android.",
   "main": "index",
   "typings": "text-input.d.ts",

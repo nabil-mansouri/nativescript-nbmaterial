@@ -1,6 +1,6 @@
 import * as common from "./ripple.common";
 import { View } from "ui/core/view";
-import { DimUtilsBase, Bounds } from "../commons/lib.common"
+import { DimUtils, Bounds } from "nativescript-nbmaterial-commons";
 import { Color } from "color";
 import { RippleOption } from "./ripple"
 import {
@@ -27,8 +27,8 @@ function MDCRipple(self: View, opts: RippleOption, resolve, reject) {
     //
     let left = native.bounds.origin.x;
     let top = native.bounds.origin.y;
-    const bounds: Bounds = DimUtilsBase.bounds(top, left, native.bounds.size.width, native.bounds.size.height);
-    const centerBounds = DimUtilsBase.centerOf(bounds);
+    const bounds: Bounds = DimUtils.bounds(top, left, native.bounds.size.width, native.bounds.size.height);
+    const centerBounds = DimUtils.centerOf(bounds);
     let x = centerBounds.left;
     let y = centerBounds.top;
     //
@@ -59,8 +59,8 @@ function MyRipple(self: View, opts: RippleOption, resolve, reject) {
     //
     let left = native.bounds.origin.x;
     let top = native.bounds.origin.y;
-    const bounds: Bounds = DimUtilsBase.bounds(top, left, native.bounds.size.width, native.bounds.size.height);
-    const centerBounds = DimUtilsBase.centerOf(bounds);
+    const bounds: Bounds = DimUtils.bounds(top, left, native.bounds.size.width, native.bounds.size.height);
+    const centerBounds = DimUtils.centerOf(bounds);
     let x = centerBounds.left;
     let y = centerBounds.top;
     //BOUNDS

@@ -10,15 +10,15 @@ of writing your own CSS rules. For a full list of class names in the theme
 refer to http://docs.nativescript.org/ui/theme. 
 The imported CSS rules must precede all other types of rules.
 */  
-@import './material/bottomnav/bottomnav.css'; 
+@import 'nativescript-nbmaterial-bottomnav/bottomnav.css'; 
 
 
 BottomNavigation{
     color:white;
-    background-color:purple;
-    font-size:24;
+    background-color:purple; 
     vertical-align: bottom;
-    height: 56;
+    fontSize:24;
+    height: 56;/*56 and ADD 100px on android*/
     margin:0;
     ripple-color:white;
 }

@@ -3,7 +3,7 @@ import { InheritedProperty } from 'tns-core-modules/ui/core/properties';
 import { EditableTextBase } from 'tns-core-modules/ui/editable-text-base';
 import { android as androidApp } from 'tns-core-modules/application';
 import { TextField } from 'tns-core-modules/ui/text-field';
-import { maxHeightProperty } from "nativescript-nbmaterial-layouts";
+import { maxHeightProperty } from "nativescript-nbmaterial-layouts/style";
 import * as common from "./text-input.common";
 
 export * from "./text-input.common";

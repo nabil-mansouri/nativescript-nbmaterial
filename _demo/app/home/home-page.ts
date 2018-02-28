@@ -9,10 +9,10 @@ import { Observable } from 'tns-core-modules/data/observable';
 import * as Rx from 'rxjs/Rx';
 import { Frame } from 'ui/frame';
 import { RecyclerView, ItemEventData } from "nativescript-nbmaterial-recycler";
-import { FixedHeaderBehavior, ScrollScaleBehavior } from "nativescript-nbmaterial-coordinator";
-import { SearchCallback, SearchBar, SearchBarModal } from "nativescript-nbmaterial-searchbar";
+import "nativescript-nbmaterial-coordinator/coordinator";//AUGMENT VIEW
+import { FixedHeaderBehavior, ScrollScaleBehavior } from "nativescript-nbmaterial-coordinator/recycler/scroll";
+import { SearchCallback, SearchBar, SearchBarModal } from "nativescript-nbmaterial-search";
 import { PullToRefresh } from "nativescript-nbmaterial-pullrefresh";
-import "../material/coordinator/coordinator";//AUGMENT VIEW
 
 
 debugger;

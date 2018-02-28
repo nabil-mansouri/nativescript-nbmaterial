@@ -1,31 +1,44 @@
 {
+	"name": "nbmaterial-demo",
+	"version": "1.0.0",
+	"android": {
+		"v8Flags": "--expose_gc"
+	},
 	"nativescript": {
 		"id": "org.nbmaterial.demo",
 		"tns-android": {
 			"version": "3.4.1"
 		}
 	},
+	"scripts": {
+		"tsc": "tsc -skipLibCheck",
+		"ios": "npm i && npm run tsc && tns run ios",
+		"android": "npm i && npm run tsc && tns run android"
+	},
 	"dependencies": {
-		"tns-core-modules": "3.4.1",
-		"nativescript-nbmaterial-appbar": "^1.0.0",
-		"nativescript-nbmaterial-bottomnav": "^1.0.0",
+		"nativescript-nbmaterial-appbar": "^1.0.1",
+		"nativescript-nbmaterial-bottomnav": "^1.0.1",
 		"nativescript-nbmaterial-bottomsheet": "^1.0.0",
 		"nativescript-nbmaterial-buttons": "^1.0.0",
 		"nativescript-nbmaterial-calendar": "^1.0.0",
 		"nativescript-nbmaterial-coordinator": "^1.0.0",
-		"nativescript-nbmaterial-elevation": "^1.0.0",
-		"nativescript-nbmaterial-layouts": "^1.0.0",
+		"nativescript-nbmaterial-elevation": "^1.0.1",
+		"nativescript-nbmaterial-layouts": "^1.0.1",
 		"nativescript-nbmaterial-pullrefresh": "^1.0.0",
 		"nativescript-nbmaterial-recycler": "^1.0.0",
-		"nativescript-nbmaterial-ripple": "^1.0.0",
+		"nativescript-nbmaterial-ripple": "^1.0.1",
 		"nativescript-nbmaterial-search": "^1.0.0",
 		"nativescript-nbmaterial-tabs": "^1.0.0",
-		"nativescript-nbmaterial-textinput": "^1.0.0"
+		"nativescript-nbmaterial-textinput": "^1.0.1",
+		"tns-core-modules": "3.4.1"
 	},
 	"devDependencies": {
 		"babel-traverse": "6.4.5",
 		"babel-types": "6.4.5",
 		"babylon": "6.4.5",
-		"lazy": "1.0.11"
+		"lazy": "1.0.11",
+		"nativescript-dev-typescript": "0.5.0",
+		"tns-platform-declarations": "^3.1.1",
+		"typescript": "^2.7.2"
 	}
 }
