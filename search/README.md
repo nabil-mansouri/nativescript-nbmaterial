@@ -41,25 +41,25 @@ searchBar.register(searchAdapter)
  
 ```xml 
 <Page xmlns="http://schemas.nativescript.org/tns.xsd"  xmlns:sea="nativescript-nbmaterial-search">
- 		<sea:SearchBarModal id="searchbar">
-			<sea:SearchBarModal.barTemplate>
-				<sea:SearchBar>
-					<sea:SearchField/>
-					<sea:SearchIcon text="arrow_back" action="cancel" position="left"/>
-					<sea:SearchIcon text="mic" action="speech" position="right"/>
-					<sea:SearchIcon text="clear" action="clear" position="right"/>
-				</sea:SearchBar>
-			</sea:SearchBarModal.barTemplate>
-			<sea:SearchBarModal.resultTemplate>
-				<StackLayout  paddingTop="15">
-					<ListView items="{{results}}"  itemTap="searchTap">
-						<ListView.itemTemplate>
-							<Label text="{{label}}" textWrap="true" />
-						</ListView.itemTemplate>
-					</ListView>
-				</StackLayout>
-			</sea:SearchBarModal.resultTemplate>
-		</sea:SearchBarModal>
+    <sea:SearchBarModal id="searchbar">
+        <sea:SearchBarModal.barTemplate>
+            <sea:SearchBar>
+                <sea:SearchField/>
+                <sea:SearchIcon text="arrow_back" action="cancel" position="left"/>
+                <sea:SearchIcon text="mic" action="speech" position="right"/>
+                <sea:SearchIcon text="clear" action="clear" position="right"/>
+            </sea:SearchBar>
+        </sea:SearchBarModal.barTemplate>
+        <sea:SearchBarModal.resultTemplate>
+            <StackLayout  paddingTop="15">
+                <ListView items="{{results}}"  itemTap="searchTap">
+                    <ListView.itemTemplate>
+                        <Label text="{{label}}" textWrap="true" />
+                    </ListView.itemTemplate>
+                </ListView>
+            </StackLayout>
+        </sea:SearchBarModal.resultTemplate>
+    </sea:SearchBarModal>
 </Page>
 
 }
