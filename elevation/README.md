@@ -7,17 +7,16 @@ This way you can define "elevation" property on DOM elements or in CSS.
 
 ```typescript
 interface Style {
-        elevation: number;
-    }
+    elevation: number;
+}
 interface Background {
-        elevation: number;
-    }
+    elevation: number;
+}
 interface View {
-        elevation: number;
-        getElevationDefault(): number;
-        setElevationNative(back: Background);
-    }
+    elevation: number;
+    getElevationDefault(): number;
+    setElevationNative(back: Background);
+}
 ```
-
 
 [See all modules here](https://github.com/nabil-mansouri/nativescript-nbmaterial)

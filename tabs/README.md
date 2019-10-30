@@ -15,27 +15,27 @@ TabSep is the indicator
 TabTitle extends Label
 ```xml 
 <Page xmlns="http://schemas.nativescript.org/tns.xsd"  xmlns:tab="nativescript-nbmaterial-tabs">
- 		<tab:Tabs select="selectTabs" colSpan="4" row="1">
-				<tab:TabSep/>
-				<tab:TabItem>
-					<tab:TabTitle text="Mes Chouks" />
-				</tab:TabItem>
-				<tab:TabItem>
-					<tab:TabTitle text="Mes Catégories" />
-				</tab:TabItem>
-				<tab:TabItem>
-					<tab:TabTitle text="Mes Recherches" />
-				</tab:TabItem>
-				<tab:TabItem>
-					<tab:TabTitle text="Mes Pages" />
-				</tab:TabItem>
-				<tab:TabItem>
-					<tab:TabTitle text="Mes Aller" />
-				</tab:TabItem>
-				<tab:TabItem>
-					<tab:TabTitle text="Mes Pourquoi" />
-				</tab:TabItem>
-			</tab:Tabs>
+	<tab:Tabs select="selectTabs" colSpan="4" row="1">
+			<tab:TabSep/>
+			<tab:TabItem>
+				<tab:TabTitle text="Mes Chouks" />
+			</tab:TabItem>
+			<tab:TabItem>
+				<tab:TabTitle text="Mes Catégories" />
+			</tab:TabItem>
+			<tab:TabItem>
+				<tab:TabTitle text="Mes Recherches" />
+			</tab:TabItem>
+			<tab:TabItem>
+				<tab:TabTitle text="Mes Pages" />
+			</tab:TabItem>
+			<tab:TabItem>
+				<tab:TabTitle text="Mes Aller" />
+			</tab:TabItem>
+			<tab:TabItem>
+				<tab:TabTitle text="Mes Pourquoi" />
+			</tab:TabItem>
+		</tab:Tabs>
 </Page>
 
 }

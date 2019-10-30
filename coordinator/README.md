@@ -5,10 +5,9 @@ It uses a producer/consumer pattern based on rxJs.
  
 The module augment nativescript view in order to add behaviours:
 ```typescript  
-    interface View {
-        addBehaviour(behaviour: Behaviour);
-    } 
-
+interface View {
+    addBehaviour(behaviour: Behaviour);
+} 
 
 export interface Behaviour {
     view: View;

@@ -9,26 +9,22 @@ export function selectDate(e) {
     console.log("DATE SELECTED ", e.date, e.selected);
 }  
 ```
- 
 
 ```xml 
 <Page xmlns="http://schemas.nativescript.org/tns.xsd"  xmlns:cal="nativescript-nbmaterial-calendar">
- 		
-				<cal:CalendarMonthLayout dayTapped="selectDate" multiple="true"  >
-					<cal:CalendarAction action="previous" text="chevron_left"/>
-					<cal:CalendarTitle/>
-					<cal:CalendarAction action="next" text="chevron_right"/>
-				</cal:CalendarMonthLayout>
+    <cal:CalendarMonthLayout dayTapped="selectDate" multiple="true"  >
+        <cal:CalendarAction action="previous" text="chevron_left"/>
+        <cal:CalendarTitle/>
+        <cal:CalendarAction action="next" text="chevron_right"/>
+    </cal:CalendarMonthLayout>
 </Page>
-
-}
 ```
 multiple parameter lets you pick multiple date in the calendar.
 CalendarTitle, CalendarAction extends labels. So you can use font library like font awesome.
 
 The calendarmonthlayout has this interface:
-```typescript
 
+```typescript
 export declare class CalendarMonthLayout extends Layout {
     public static dayTappedEvent: string = "dayTapped";
     public static monthChangedEvent: string = "monthChanged";
