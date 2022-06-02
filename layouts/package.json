@@ -44,7 +44,7 @@
     "tns-core-modules": "^3.4.1"
   },
   "devDependencies": {
-    "@angular/core": "^4.3.3",
+    "@angular/core": "^11.0.5",
     "prompt": "^1.0.0",
     "rimraf": "^2.5.0",
     "tns-core-modules": "^3.4.1",
